@@ -1,0 +1,8 @@
+<h1>Modificar Curso</h1>
+
+<p>Id <input type="number" [(ngModel)]="curso.id"></p>
+<p>Nombre <input type="text" [(ngModel)]="curso.nombre"></p>
+<p>Duración <input type="number" [(ngModel)]="curso.duracion"></p>
+<p>Nivel <input type="number" [(ngModel)]="curso.nivel" min="0" max="2"></p>
+
+<button (click)="updateCurso()" routerLink="">Modificar</button>

@@ -1,0 +1,19 @@
+<h1>Cursos</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Duración</th>
+        <th>Nivel</th>
+               
+    </tr>
+    <tr *ngFor="let curso of cursos">
+        <td>{{curso.id}}</td>
+        <td>{{curso.nombre}}</td>
+        <td>{{curso.duracion}}</td>
+        <td>{{opcion[curso.nivel]}}</td> 
+        <td><button><a [routerLink]="['/update', curso.id]" >Modificar</a></button></td>
+                    
+    </tr>
+</table>
