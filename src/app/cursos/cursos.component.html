@@ -13,7 +13,9 @@
         <td>{{curso.nombre}}</td>
         <td>{{curso.duracion}}</td>
         <td>{{opcion[curso.nivel]}}</td> 
-        <td><button><a [routerLink]="['/update', curso.id]" >Modificar</a></button></td>
+        <td><button [routerLink]="['/update', curso.id]">Modificar</button></td>
                     
     </tr>
 </table>
+<button [routerLink]="['/alta']">Alta</button>
+<router-outlet></router-outlet>

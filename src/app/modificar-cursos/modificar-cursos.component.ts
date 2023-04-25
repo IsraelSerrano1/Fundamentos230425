@@ -19,9 +19,12 @@ export class ModificarCursosComponent {
   updateCurso(){
     this.cursosService.updateCursoS(this.curso.id,this.curso)    
   }
+  
   ngOnInit(){
-    this.curso.id = this.activarRutas.snapshot.params['id']
+    this.curso.id = this.activarRutas.snapshot.params['id'] 
+    if(this.curso.id != undefined){
     this.curso = this.cursosService.encontrarCurso(this.curso.id)
+    }
   }
 
 }

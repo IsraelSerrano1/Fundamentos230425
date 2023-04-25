@@ -4,8 +4,12 @@ import { ModificarCursosComponent } from './modificar-cursos/modificar-cursos.co
 import { CursosComponent } from './cursos/cursos.component';
 
 const routes: Routes = [
-  {path: '', component:CursosComponent},
-  {path: 'update/:id', component:ModificarCursosComponent}
+  {path: '', component:CursosComponent,children: [
+
+    {path: 'alta', component:ModificarCursosComponent},
+    {path: 'update/:id', component:ModificarCursosComponent}
+
+  ]},
 ];
 
 @NgModule({

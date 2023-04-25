@@ -17,10 +17,12 @@ export class ServicioCursosService {
     let index = this.cursosS.findIndex((cursosS) => cursosS.id == id);   
     if(index != -1){      
     this.cursosS[index] = newCurso;    
+    } else{
+      this.cursosS.push(newCurso);
     }
   }
 
-  encontrarCurso(index: number){
+   encontrarCurso(index: number){
     let curso: Curso = this.cursosS[index-1]
     return curso;
   }
